@@ -11,11 +11,8 @@ scene.background = loader.load("Images/galaxy.jpg")
 
 // geometric figure
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial( { color: 0x336eff } );
+material = new THREE.MeshPhysicalMaterial({	color: 0x777777 });
 const cube = new THREE.Mesh( geometry, material );
-const light = new THREE.AmbientLight( 0x404040 );
-light.intensity = 0.5;
-cube.add( light );
 scene.add( cube );
 
 // camera and ligth
