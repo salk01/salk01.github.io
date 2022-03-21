@@ -5,16 +5,24 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight);
 document.body.appendChild( renderer.domElement );
 
+// Scene backgorund image
 const loader = new THREE.TextureLoader();
 scene.background = loader.load("Images/galaxy.jpg")
 
+// geometric figure
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial( { color: 0x336eff } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
+// camera and ligth
 camera.position.z = 5;
 
+const light = new THREE.AmbientLight( 0x404040 );
+light.intensity = 0.5;
+scene.add( light );
+
+// function start
 function animate() {
 	requestAnimationFrame( animate );
 
@@ -24,4 +32,5 @@ function animate() {
 	renderer.render( scene, camera );
 };
 
+// calls
 animate();
