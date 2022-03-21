@@ -18,7 +18,7 @@ scene.add( cube );
 // camera and ligth
 camera.position.z = 5;
 
-const pointLigth = THREE.PointLight(0xff0000, 2)
+const pointLigth = new THREE.PointLight(0xff0000, 2)
 pointLigth.position.set(1,1,1)
 pointLigth.intensity = 1
 scene.add(pointLigth)
