@@ -25,7 +25,7 @@ let group = new THREE.Group();
 let vector = new THREE.Vector3(10, 10, 10);
 
   // add wooden Box
-let woodenBox = new THREE.Mesh(boxGeometry, woodMaterial);
+let woodenBox = new THREE.Mesh(geometry, geometry2);
 
  //update postion
  woodenBox.position.copy(vector);
