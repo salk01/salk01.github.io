@@ -15,24 +15,6 @@ material = new THREE.MeshPhysicalMaterial({	color: 0x777777 });
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
-const geometry2 = new THREE.BoxGeometry();
-material = new THREE.MeshPhysicalMaterial({	color: 0x777777 });
-const cube2 = new THREE.Mesh( geometry2, material );
-scene.add( cube2 );
-
-let group = new THREE.Group();
-// position of box
-let vector = new THREE.Vector3(10, 10, 10);
-
-  // add wooden Box
-let woodenBox = new THREE.Mesh(geometry, geometry2);
-
- //update postion
- woodenBox.position.copy(vector);
-
-// add to scene
-group.add(woodenBox)
-this.scene.add(group);
 
 // camera and ligth
 camera.position.z = 5;
